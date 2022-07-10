@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xAlarm - Alarm clock</title>
+    <link rel="stylesheet" href="externals/style.css">
+    <link rel="stylesheet" href="externals/navigation/nav.css">
+
+    <!-- Importing Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="hamburger">
+        <button onclick="hide()">&#8801;</button>
+    </div>
+
+    <nav class="navList hide">
+
+        <ul class="ul hide">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Set an alarm</a></li>
+            <li><a href="#">Get in touch</a></li>
+            <div class="bc">
+                <button id="butt" class="hide"> Github </button>
+                <button id="butt" class="hide"> Facebook </button>
+            </div>
+        </ul>
+    </nav>
+
+     <div class="card">
+            <div class="container">
+              <h4><b>Upcoming Alaram</b></h4>
+              <p id="info"></p>
+            </div>
+          </div>
+          <p id="break"></p>
+    <main>
+       
+
+        <section class="mainSection">
+            <form>
+                <h2>xAlarm - Set your alarm here!</h2>
+                <p id="break"></p>
+
+                <select id="hours">
+                    <option selected>Hour</option>
+                    <option>00</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                </select>
+
+                <select id="minutes">
+                    <option selected>Minutes</option>
+                    <option>00</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                    <option>32</option>
+                    <option>33</option>
+                    <option>34</option>
+                    <option>35</option>
+                    <option>36</option>
+                    <option>37</option>
+                    <option>38</option>
+                    <option>39</option>
+                    <option>40</option>
+                    <option>41</option>
+                    <option>42</option>
+                    <option>43</option>
+                    <option>44</option>
+                    <option>45</option>
+                    <option>46</option>
+                    <option>47</option>
+                    <option>48</option>
+                    <option>49</option>
+                    <option>50</option>
+                    <option>51</option>
+                    <option>52</option>
+                    <option>53</option>
+                    <option>54</option>
+                    <option>55</option>
+                    <option>56</option>
+                    <option>57</option>
+                    <option>58</option>
+                    <option>59</option>
+                </select>
+
+
+<p id="break"></p>
+                <button id="set"> Set Alarm</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="externals/navigation/nav.js"></script>
+    <script src="externals/script.js"></script>
+
+    <!-- Sweet alerts -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+
+</html>

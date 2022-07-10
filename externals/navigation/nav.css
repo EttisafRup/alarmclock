@@ -1,0 +1,121 @@
+/* Styling the navigation Hamburger*/
+.hamburger button{
+    z-index: 2;
+    display: none;
+    margin: 1rem 0rem;
+    position: absolute;
+    right: 0;
+    font-size: 4rem;
+    width: 5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 0.5rem white;
+}
+
+/* Settingup the Logo */
+.logo{
+    margin-left: 2rem;
+}
+.logo img{
+    width: 8rem;
+}
+
+/* Setting up navigation bar */
+.navList{
+    display: flex;
+    height: 30rem;
+    background-color: #f5625d;
+    margin-top: -24rem;
+}
+.navList ul{
+    position: absolute;
+    display: flex;
+    right: 4rem;
+    transition: 0.4s;
+    z-index: 1;
+}
+.navList li{
+    list-style: none;
+    font-size: 1.8rem;
+    padding: 2.5rem 1.8rem;
+    cursor: pointer;
+}
+.navList a{
+    text-decoration: none;
+    color: white;
+    transition: 0.1s;
+    font-weight: 800;
+
+}
+.navList a:hover{
+    text-shadow: 0 0 0.2rem rgb(255, 255, 255);
+}
+.navList button{
+    height: 4rem;
+    width: 9rem;
+    margin: 1rem 0.7rem;
+    border: none; outline: none;
+    background: transparent;
+    border: 0.2rem solid rgb(255, 255, 255);
+    box-shadow: 0 0 0.3rem rgb(255, 255, 255);
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 1.5rem;
+}
+
+.navList button:hover{
+    color: black;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+}
+
+
+/* Navbar Respo */
+
+@media (max-width: 750px) {
+    .hamburger button{
+        display: block;
+    }
+    .navList{
+        transition:all 0.7s ease-in;
+    }
+    .hide{
+        margin-top: -50rem;
+    }
+    nav{
+        transition: 0.8s;
+    }
+    .navList a{
+        color: white;
+    }
+    .navList li{
+        z-index: 2;
+    }
+    .navList ul{
+        position: fixed;
+        text-align: center;
+        background-color: #f5625d;
+        flex-direction: column;
+        right: 0rem;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .bc{
+        text-align: center;
+    }
+    .navList button{
+        color: white;
+        cursor: pointer;
+    }
+    main{
+        margin-top: 50rem;
+    }
+}
+
+/* Navbar Ends */
+
+
