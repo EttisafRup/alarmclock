@@ -6,7 +6,7 @@ let currentDate = new Date();
 let currentHour = currentDate.getHours().toString();
 let currentMinutes = currentDate.getMinutes().toString();
 
-let dateOutput = currentHour + currentMinutes;
+let dateOutput = parseInt(currentHour + currentMinutes);
 console.log(dateOutput);
 
 // --> Collecting data from user and storing up to the localStorage <--
@@ -20,31 +20,24 @@ setButton.addEventListener('click', (e) => {
     let dateInput = hours + minutes;
     localStorage.setItem('alarm', dateInput);
 
-
     swal("Owh Yoo!", "Your alarm has been saved!", "success");
 })
 
 // --> Writing a statement to play the alarm <--
-let getInput = localStorage.getItem('alarm');
-
-if (getInput == dateOutput) {
+let dateInput = parseInt(localStorage.getItem('alarm'));
+if (dateInput == dateOutput) {
     alarm.play()
 }
 else{
     setTimeout(function () {
         window.location.reload(1);
-    }, 10000);
+    }, 20000);
 }
 
-console.log(getInput);
+console.log(dateInput);
 
 // --> Alarm status <--
 
 let info = document.getElementById('info');
-
-if (getInput > currentDate) {
-    info.innerHTML = `- Your next alarm is going to rang on ${getInput}`;
-} else {
-    info.innerHTML = `- You have no upcoming alarms yet! Set one :) `;
-}
-
+let showTime = localStorage.getItem('alarm');
+info.innerHTML = ` Your next alarm is going to rang on &#8594 ${showTime}`;
