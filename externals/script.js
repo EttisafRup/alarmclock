@@ -1,22 +1,22 @@
 // --> Setting up the Alarm audio <--
-let alarm = new Audio('alarmbell.mp3');
+const alarm = new Audio('alarmbell.mp3');
 
 // --> Fixing up the current time <--
 
 setInterval(() => {
 
 let currentDate = new Date();
-let currentHour = currentDate.getHours().toString();
-let currentMinutes = currentDate.getMinutes().toString();
-let dateOutput = parseInt(currentHour + currentMinutes);
+let currentHour = parseInt(currentDate.getHours());
+let currentMinutes = parseInt(currentDate.getMinutes());
+let dateOutput = currentHour + currentMinutes;
 
 // --> Collecting data from user and storing up to the localStorage <--
 let setButton = document.getElementById('set');
 setButton.addEventListener('click', (e) => {
     e.preventDefault();
 
-    let hours = document.getElementById('hours').value;
-    let minutes = document.getElementById('minutes').value;
+    let hours = parseInt(document.getElementById('hours').value);
+    let minutes = parseInt(document.getElementById('minutes').value);
 
     let dateInput = hours + minutes;
     localStorage.setItem('alarm', dateInput);
@@ -26,8 +26,10 @@ setButton.addEventListener('click', (e) => {
 
 // --> Writing a statement to play the alarm <--
 let dateInput = parseInt(localStorage.getItem('alarm'));
+let div = document.getElementById('gif');
 if (dateInput == dateOutput) {
-    alarm.play()
+    div.style.display = 'block';
+    alarm.play();
 }
 
 // --> Alarm status <--
@@ -37,4 +39,5 @@ let showTime = parseInt(localStorage.getItem('alarm'));
 
 info.innerHTML = ` You previously set an alarm at &#8594 ${showTime}`;
 
+console.log(dateInput, dateOutput);
 }, 1000);

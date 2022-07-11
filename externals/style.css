@@ -72,59 +72,99 @@ select {
     box-shadow: 0 0.5rem 0 rgba(0, 0, 0, 0.2);
 
 }
-.card h4{
+
+.card h4 {
     font-size: 2rem;
     margin: 0.5rem 0rem;
 }
-.card p{
+
+.card p {
     font-size: 1.5rem;
     font-weight: 600;
 }
 
+.gif {
+    display: none;
+    width: 25rem;
+    margin: 5rem 0rem;
+    border: 0.3rem solid transparent;
+    border-image: linear-gradient(0deg, #ff0, #f0f);
+    border-image-slice: 1;
+    animation: gif 2s linear infinite alternate;
+    transition: 0.4s;
+}
 
+
+@keyframes gif {
+    0% {
+        border-image: linear-gradient(0deg, #f5625d, skyblue);
+        border-image-slice: 1;
+    }
+    25% {
+        border-image: linear-gradient(90deg, #f5625d, skyblue);
+        border-image-slice: 1;
+    }
+    50% {
+        border-image: linear-gradient(180deg, #f5625d, skyblue);
+        border-image-slice: 1;
+    }
+    75% {
+        border-image: linear-gradient(270deg, #f5625d, skyblue);
+        border-image-slice: 1;
+    }
+    100% {
+        border-image: linear-gradient(360deg, #f5625d, skyblue);
+        border-image-slice: 1;
+    }
+}
 
 /* MEDIA QUERIES */
 @media (max-width: 1300px) {
-    html{
+    html {
         font-size: 80%;
     }
 }
+
 @media (max-width: 1200px) {
-    html{
+    html {
         font-size: 62.5%;
     }
 }
+
 @media (max-width: 1000px) {
-    html{
+    html {
         font-size: 61.5%;
     }
 }
+
 @media (max-width: 700px) {
-    html{
+    html {
         font-size: 60.5%;
     }
 }
-@media (max-width: 500px) {
 
-}
+@media (max-width: 500px) {}
+
 @media (max-width: 280px) {
-    html{
+    html {
         font-size: 60%;
     }
 }
+
 @media (max-width: 260px) {
-    html{
+    html {
         font-size: 53%;
     }
 }
+
 @media (max-width: 230px) {
-    html{
+    html {
         font-size: 50%;
     }
 }
 
 @media (max-width: 200px) {
-    html{
+    html {
         font-size: 45%;
     }
 }
