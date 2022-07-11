@@ -18,6 +18,9 @@ setButton.addEventListener('click', (e) => {
     let hours = parseInt(document.getElementById('hours').value);
     let minutes = parseInt(document.getElementById('minutes').value);
 
+    localStorage.setItem('hour', hours);
+    localStorage.setItem('minute', minutes);
+
     let dateInput = hours + minutes;
     localStorage.setItem('alarm', dateInput);
 
@@ -32,12 +35,17 @@ if (dateInput == dateOutput) {
     alarm.play();
 }
 
-// --> Alarm status <--
+// --> Live Alarm status <--
+
+let showHours = localStorage.getItem('hour');
+let showMinutes = localStorage.getItem('minute');
 
 let info = document.getElementById('info');
-let showTime = parseInt(localStorage.getItem('alarm'));
-
-info.innerHTML = ` You previously set an alarm at &#8594 ${showTime}`;
+if (showHours==null) {
+    info.innerHTML = `No alarms yet! Try to save an alarm right now.`;
+} else {
+    info.innerHTML = ` You've previously set an alarm at &#8594 ${showHours}:${showMinutes} `;
+}
 
 console.log(dateInput, dateOutput);
 }, 1000);
